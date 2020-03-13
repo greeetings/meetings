@@ -1,0 +1,25 @@
+1. Ссылка для запуска приложения: https://avito-meetings.herokuapp.com/   (деплой на heroku)
+2. Для проверки работы: 
+  2.1 Добавление: 
+  fetch(
+  '/meeting', 
+  { 
+    method: 'POST', 
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text: 'New meeting', date: '2020-03-15 13:13', participants: 'Korolev Oleg Zakharov Ivan Labzov Kirill Vorobev Artem' })
+  }
+  ).then(result => result.json().then(console.log))
+   
+   2.2 Изменить участников/дату/название встречи
+   fetch(
+  '/message/1', 
+  { 
+    method: 'PUT', 
+    headers: { 'Content-Type': 'application/json' }, 
+    body: JSON.stringify({ participants: 'another participants' })
+  }
+).then(result => result.json().then(console.log));
+  
+  2.3 Удаление встречи
+  fetch('/message/1', { method: 'DELETE' }).then(result => console.log(result))
+  
