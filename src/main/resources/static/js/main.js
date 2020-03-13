@@ -86,6 +86,8 @@ Vue.component('meetings-list', {
         }
     },
     template:
+        '<div  style="position: relative;  ">' +
+
         '<table style="margin-top: 10px " border = "1" >' +
         '<tr><td width="40"><i>' +
         'Num</i></td>' +
